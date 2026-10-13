@@ -80,13 +80,13 @@ These are actual FreeCandy7 renders. Click any image for the full-size result.
 
 ## Advertising artwork
 
-These five 1920 × 1080 ads from the original 32-effect campaign feature the campaign photograph and actual rendered effects:
+Five finished 1920 × 1080 ads feature the campaign photograph and actual rendered effects:
 
 1. [FreeCandy7 campaign hero](docs/showcase/advert-01.png)
 2. [Fire and Smoke](docs/showcase/advert-02.png)
 3. [Icicles and Snow](docs/showcase/advert-03.png)
 4. [Chrome, Wood, and Animal Fur](docs/showcase/advert-04.png)
-5. [32 effects, one plug-in](docs/showcase/advert-05.png)
+5. [33 effects, one plug-in](docs/showcase/advert-05.png)
 
 ## Made for the artwork in front of you
 

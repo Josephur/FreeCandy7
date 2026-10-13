@@ -24,7 +24,7 @@ const MANIFEST_HEAD: &str = r#"{
   "version": "0.14.0",
   "kind": "filter",
   "author": "FreeCandy7 contributors",
-  "description": "33 procedural texture, material, lighting and distortion effects. Select an effect to show its settings.",
+  "description": "Procedural texture, material, lighting and distortion effects. Select an effect to show its settings.",
   "params": {
 "#;
 const MANIFEST_TAIL: &str = r#"

@@ -22,6 +22,7 @@ fn shape_effects_request_the_actual_selection_as_their_input_shape() {
         "fire",
         "glow",
         "smoke",
+        "neon_tubes",
     ];
     assert_eq!(effects.len(), expected.len());
     for name in expected {

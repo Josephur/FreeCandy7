@@ -1,7 +1,7 @@
 [package]
 name = "freecandy7"
-description = "FreeCandy7: WebAssembly filter plug-in for PhotoCraft (one menu item, an Effect selector; 32 effects)"
-version = "0.13.0"
+description = "FreeCandy7: WebAssembly filter plug-in for PhotoCraft (one menu item, an Effect selector; 33 effects)"
+version = "0.14.0"
 edition = "2024"
 license = "0BSD"
 publish = false

@@ -1,14 +1,20 @@
 # FreeCandy7 for PhotoCraft
 
-**32 effects. One sweet plug-in.**
+**33 effects. One sweet plug-in.**
 
-Current version: **0.13.0**.
+Current version: **0.14.0**.
 
 ![FreeCandy7 effects for PhotoCraft, featuring the Free Candy van campaign image](docs/showcase/hero.png)
 
 FreeCandy7 gives your artwork reflective metal, fur, fire, ice, liquid drips, lightning, and a full collection of procedural textures. It installs as one WebAssembly plug-in, with one **Effect** dropdown and controls that follow the effect you choose.
 
 > **Requires our PhotoCraft fork for now.** Use the **`codex/desktop-large-plugin-effects`** branch of **[Josephur/photocraft](https://github.com/Josephur/photocraft/tree/codex/desktop-large-plugin-effects)**. The host changes that support this suite are still moving through the PR process. The standard upstream release does not yet include all required support. This requirement stays in place until those changes are settled and available upstream.
+
+## New: Neon Tubes
+
+[![Neon Tubes outlining NEON lettering with pink glass and a soft glow](docs/showcase/neon-tubes.png)](docs/showcase/neon-tubes.png)
+
+Trace text or a shape with luminous glass tubing. Adjust **Tube width**, **Glow radius**, **Brightness**, **Tube colour**, **Glass reflections**, **Broken sections**, and **Brightness variation**. The random seed makes distressed sections repeatable. Includes **Pink Neon Sign**, **Electric Blue Tubes**, and **Weathered Neon** presets. Everything is procedural; no additional image materials are used.
 
 ## A taste of the effects
 
@@ -29,19 +35,52 @@ These are actual FreeCandy7 renders. Click any image for the full-size result.
 | [![A branching lightning bolt](docs/showcase/lightning.png)](docs/showcase/lightning.png) | [![A procedural wood surface with grain and knots](docs/showcase/wood.png)](docs/showcase/wood.png) |
 | **A bolt you can place and shape.** | **Grain, knots, color, and scale in one material.** |
 
-## All 32 effects
 
-[![Contact sheet showing every FreeCandy7 effect](docs/showcase/all-32-effects.jpg)](docs/showcase/all-32-effects.jpg)
+<!-- BEGIN GENERATED EFFECT SHOWCASE -->
+## All 33 effects
 
-| Family | Effects |
+[![Every current FreeCandy7 effect](docs/showcase/all-effects.jpg)](docs/showcase/all-effects.jpg)
+
+| Effect | Actual rendered ad |
 |---|---|
-| Textures | Animal Fur, Brick Wall, Brushed Metal, Clouds, Diamond Plate, Marble, Reptile Skin, Rust, Stone Wall, Texture Noise, Weave, Wood |
-| Materials and object edges | Bevel, Chrome, Glass, Extrude, Shadow, Motion Trail, Water Drops, Drip, Snow, Icicles |
-| Lighting, atmosphere, and distortion | Lightning, Backlight, Corona, Electrify, Fire, Glow, Smoke, Star, Swirl, Ripples |
+| Lightning | [View full-size ad](docs/showcase/effects/lightning.png) |
+| Animal Fur | [View full-size ad](docs/showcase/effects/animal_fur.png) |
+| Brick Wall | [View full-size ad](docs/showcase/effects/brick_wall.png) |
+| Brushed Metal | [View full-size ad](docs/showcase/effects/brushed_metal.png) |
+| Clouds | [View full-size ad](docs/showcase/effects/clouds.png) |
+| Diamond Plate | [View full-size ad](docs/showcase/effects/diamond_plate.png) |
+| Marble | [View full-size ad](docs/showcase/effects/marble.png) |
+| Reptile Skin | [View full-size ad](docs/showcase/effects/reptile_skin.png) |
+| Rust | [View full-size ad](docs/showcase/effects/rust.png) |
+| Stone Wall | [View full-size ad](docs/showcase/effects/stone_wall.png) |
+| Texture Noise | [View full-size ad](docs/showcase/effects/texture_noise.png) |
+| Weave | [View full-size ad](docs/showcase/effects/weave.png) |
+| Wood | [View full-size ad](docs/showcase/effects/wood.png) |
+| Bevel | [View full-size ad](docs/showcase/effects/bevel.png) |
+| Chrome | [View full-size ad](docs/showcase/effects/chrome.png) |
+| Glass | [View full-size ad](docs/showcase/effects/glass.png) |
+| Extrude | [View full-size ad](docs/showcase/effects/extrude.png) |
+| Shadow | [View full-size ad](docs/showcase/effects/shadow.png) |
+| Motion Trail | [View full-size ad](docs/showcase/effects/motion_trail.png) |
+| Water Drops | [View full-size ad](docs/showcase/effects/water_drops.png) |
+| Drip | [View full-size ad](docs/showcase/effects/drip.png) |
+| Snow | [View full-size ad](docs/showcase/effects/snow.png) |
+| Icicles | [View full-size ad](docs/showcase/effects/icicles.png) |
+| Backlight | [View full-size ad](docs/showcase/effects/backlight.png) |
+| Corona | [View full-size ad](docs/showcase/effects/corona.png) |
+| Electrify | [View full-size ad](docs/showcase/effects/electrify.png) |
+| Fire | [View full-size ad](docs/showcase/effects/fire.png) |
+| Glow | [View full-size ad](docs/showcase/effects/glow.png) |
+| Smoke | [View full-size ad](docs/showcase/effects/smoke.png) |
+| Star | [View full-size ad](docs/showcase/effects/star.png) |
+| Swirl | [View full-size ad](docs/showcase/effects/swirl.png) |
+| Ripples | [View full-size ad](docs/showcase/effects/ripples.png) |
+| Neon Tubes | [View full-size ad](docs/showcase/effects/neon_tubes.png) |
+<!-- END GENERATED EFFECT SHOWCASE -->
 
 ## Advertising artwork
 
-Five finished 1920 × 1080 ads feature the campaign photograph and actual rendered effects:
+These five 1920 × 1080 ads from the original 32-effect campaign feature the campaign photograph and actual rendered effects:
 
 1. [FreeCandy7 campaign hero](docs/showcase/advert-01.png)
 2. [Fire and Smoke](docs/showcase/advert-02.png)

@@ -21,17 +21,17 @@ fn panic(_: &core::panic::PanicInfo) -> ! {
 const MANIFEST_HEAD: &str = r#"{
   "id": "com.stack-tech.freecandy7",
   "name": "FreeCandy7",
-  "version": "0.13.0",
+  "version": "0.14.0",
   "kind": "filter",
   "author": "FreeCandy7 contributors",
-  "description": "32 procedural texture, material, lighting and distortion effects. Select an effect to show its settings.",
+  "description": "33 procedural texture, material, lighting and distortion effects. Select an effect to show its settings.",
   "params": {
 "#;
 const MANIFEST_TAIL: &str = r#"
   },
   "presetSelector": "effect",
   "presetPreserve": ["animal_fur_pattern", "animal_fur_scale", "animal_fur_scaling", "animal_fur_natural_colors", "animal_fur_light", "animal_fur_dark", "animal_fur_seed"],
-  "selectionShape": {"parameter":"effect","values":["bevel","chrome","glass","extrude","shadow","motion_trail","drip","snow","icicles","backlight","corona","electrify","fire","glow","smoke"]},
+  "selectionShape": {"parameter":"effect","values":["bevel","chrome","glass","extrude","shadow","motion_trail","drip","snow","icicles","backlight","corona","electrify","fire","glow","smoke","neon_tubes"]},
   "guide": {"from": "start", "to": "end"},
   "overlap": 64,
   "clampContext": true,
@@ -217,6 +217,11 @@ pub fn required_overlap(json: &[u8]) -> u32 {
                 * num(json, "icicles_size", 100.0).clamp(25.0, 1000.0)
                 / 100.0
                 + 2.0
+        }
+        b"neon_tubes" => {
+            num(json, "neon_tubes_width", 8.0).clamp(2.0, 500.0) * 0.5
+                + num(json, "neon_tubes_glow", 28.0).clamp(0.0, 1250.0)
+                + 4.0
         }
         b"fire" => num(json, "fire_height", 42.0).clamp(8.0, 1500.0) + 4.0,
         b"smoke" => num(json, "smoke_height", 48.0).clamp(8.0, 1500.0) + 4.0,

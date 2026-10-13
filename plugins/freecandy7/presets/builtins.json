@@ -100,5 +100,8 @@
   "Reverse Vortex": {"effect":"swirl","swirl_style":"distort","swirl_amount":90,"swirl_radius":28,"swirl_center":[40,55],"swirl_direction":"counterclockwise"},
   "Gentle Broad Rings": {"effect":"ripples","ripples_amount":20,"ripples_frequency":2,"ripples_radius":58,"ripples_center":[50,50]},
   "Tight Water Rings": {"effect":"ripples","ripples_amount":75,"ripples_frequency":7,"ripples_radius":26,"ripples_center":[50,50]},
-  "Offset Wave": {"effect":"ripples","ripples_amount":50,"ripples_frequency":4,"ripples_radius":45,"ripples_center":[32,65]}
+  "Offset Wave": {"effect":"ripples","ripples_amount":50,"ripples_frequency":4,"ripples_radius":45,"ripples_center":[32,65]},
+  "Pink Neon Sign": {"effect": "neon_tubes", "neon_tubes_width": 8, "neon_tubes_glow": 28, "neon_tubes_colour": "#ff428a"},
+  "Electric Blue Tubes": {"effect": "neon_tubes", "neon_tubes_width": 14, "neon_tubes_glow": 45, "neon_tubes_colour": "#30c9ff", "neon_tubes_glass": 80},
+  "Weathered Neon": {"effect": "neon_tubes", "neon_tubes_width": 9, "neon_tubes_glow": 22, "neon_tubes_colour": "#ff7540", "neon_tubes_breaks": 35, "neon_tubes_variation": 70, "neon_tubes_seed": 151}
 }

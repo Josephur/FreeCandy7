@@ -122,7 +122,7 @@ fn manifest_keeps_full_context_for_materials_with_long_distance_field_probes() {
         if overlap(&maximum) > 256 {
             assert_eq!(
                 accepted.contains(effect),
-                !matches!(name, "bevel" | "glass" | "motion_trail"),
+                !matches!(name, "bevel" | "glass" | "motion_trail" | "neon_tubes"),
                 "{name} must use the large-context layout its distance probes support"
             );
         }

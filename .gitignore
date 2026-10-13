@@ -30,3 +30,7 @@
 !/docs/showcase/*.png
 !/docs/showcase/*.jpg
 !/docs/showcase/*.jpeg
+
+!/docs/showcase/effects/
+/docs/showcase/effects/*
+!/docs/showcase/effects/*.png

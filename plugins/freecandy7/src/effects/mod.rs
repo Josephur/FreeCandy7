@@ -11,6 +11,7 @@ pub(crate) mod common;
 mod fur;
 mod lightning;
 mod materials;
+mod neon;
 mod texture_materials;
 mod textures;
 mod treadplate;
@@ -61,6 +62,7 @@ pub const EFFECTS: &[Effect] = &[
     atmosphere::EFFECTS[6],
     atmosphere::EFFECTS[7],
     atmosphere::EFFECTS[8],
+    neon::EFFECT,
 ];
 
 /// The effect called `name`.

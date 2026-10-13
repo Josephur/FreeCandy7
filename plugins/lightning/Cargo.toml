@@ -1,0 +1,26 @@
+[package]
+name = "freecandy7"
+description = "FreeCandy7: WebAssembly filter plug-in for PhotoCraft (one menu item, an Effect selector; 32 effects)"
+version = "0.13.0"
+edition = "2024"
+license = "0BSD"
+publish = false
+
+# Not a member of the PhotoCraft workspace: it builds for wasm32-unknown-unknown only.
+[workspace]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[dependencies]
+libm = "0.2"
+
+[dev-dependencies]
+serde_json = "1"

@@ -1,0 +1,303 @@
+{
+  "version": 1,
+  "presets": {
+    "Lightning": {
+      "effect": "lightning",
+      "angle": 0,
+      "blend": "screen",
+      "branching": 60,
+      "end": [
+        88,
+        62
+      ],
+      "flashPerspective": 20,
+      "flashSize": 57,
+      "glowOpacity": 73,
+      "glowWidth": 60,
+      "innerGlow": "#ffffff",
+      "jaggedness": 60,
+      "outerGlow": "#bfefff",
+      "scaling": "adaptive",
+      "seed": 1,
+      "spread": 30,
+      "start": [
+        12,
+        12
+      ],
+      "taper": true,
+      "thickness": 16
+    },
+    "Animal Fur": {
+      "effect": "animal_fur",
+      "animal_fur_dark": "#24180c",
+      "animal_fur_detail": 58,
+      "animal_fur_direction": 90,
+      "animal_fur_light": "#d6ad42",
+      "animal_fur_preserve_alpha": false,
+      "animal_fur_scale": 38,
+      "animal_fur_seed": 7
+    },
+    "Brick Wall": {
+      "effect": "brick_wall",
+      "brick_wall_brick": "#9c4932",
+      "brick_wall_detail": 50,
+      "brick_wall_mortar": "#c8c4b8",
+      "brick_wall_preserve_alpha": false,
+      "brick_wall_scale": 52,
+      "brick_wall_seed": 11
+    },
+    "Brushed Metal": {
+      "effect": "brushed_metal",
+      "brushed_metal_colour": "#87969c",
+      "brushed_metal_detail": 45,
+      "brushed_metal_direction": 0,
+      "brushed_metal_preserve_alpha": false,
+      "brushed_metal_scale": 13,
+      "brushed_metal_seed": 13
+    },
+    "Clouds": {
+      "effect": "clouds",
+      "clouds_dark": "#214778",
+      "clouds_detail": 65,
+      "clouds_light": "#eef5ff",
+      "clouds_preserve_alpha": false,
+      "clouds_scale": 90,
+      "clouds_seed": 17
+    },
+    "Diamond Plate": {
+      "effect": "diamond_plate",
+      "diamond_plate_colour": "#9ca6a9",
+      "diamond_plate_detail": 55,
+      "diamond_plate_direction": 0,
+      "diamond_plate_preserve_alpha": false,
+      "diamond_plate_scale": 34,
+      "diamond_plate_seed": 19
+    },
+    "Marble": {
+      "effect": "marble",
+      "marble_dark": "#785a56",
+      "marble_detail": 60,
+      "marble_light": "#e7dcc9",
+      "marble_preserve_alpha": false,
+      "marble_scale": 88,
+      "marble_seed": 23
+    },
+    "Reptile Skin": {
+      "effect": "reptile_skin",
+      "reptile_skin_dark": "#331f12",
+      "reptile_skin_detail": 60,
+      "reptile_skin_light": "#bd803b",
+      "reptile_skin_preserve_alpha": false,
+      "reptile_skin_scale": 37,
+      "reptile_skin_seed": 29
+    },
+    "Rust": {
+      "effect": "rust",
+      "rust_dark": "#394448",
+      "rust_detail": 62,
+      "rust_light": "#c97b37",
+      "rust_preserve_alpha": false,
+      "rust_scale": 55,
+      "rust_seed": 31
+    },
+    "Stone Wall": {
+      "effect": "stone_wall",
+      "stone_wall_detail": 56,
+      "stone_wall_mortar": "#55534c",
+      "stone_wall_preserve_alpha": false,
+      "stone_wall_scale": 67,
+      "stone_wall_seed": 37,
+      "stone_wall_stone": "#aaa89d"
+    },
+    "Texture Noise": {
+      "effect": "texture_noise",
+      "texture_noise_dark": "#382641",
+      "texture_noise_detail": 55,
+      "texture_noise_light": "#ead7bc",
+      "texture_noise_preserve_alpha": false,
+      "texture_noise_scale": 23,
+      "texture_noise_seed": 41,
+      "texture_noise_variant": "cellular"
+    },
+    "Weave": {
+      "effect": "weave",
+      "weave_dark": "#142b45",
+      "weave_detail": 48,
+      "weave_direction": 0,
+      "weave_light": "#376487",
+      "weave_preserve_alpha": false,
+      "weave_scale": 18,
+      "weave_seed": 43
+    },
+    "Wood": {
+      "effect": "wood",
+      "wood_dark": "#35180e",
+      "wood_detail": 56,
+      "wood_light": "#b5642d",
+      "wood_preserve_alpha": false,
+      "wood_scale": 76,
+      "wood_seed": 47
+    },
+    "Bevel": {
+      "effect": "bevel",
+      "bevel_angle": 315,
+      "bevel_depth": 58,
+      "bevel_highlight": "#fff5d6",
+      "bevel_shadow": "#263246",
+      "bevel_size": 8
+    },
+    "Chrome": {
+      "effect": "chrome",
+      "chrome_angle": 35,
+      "chrome_scale": 34,
+      "chrome_strength": 78,
+      "chrome_tint": "#bad2dc"
+    },
+    "Glass": {
+      "effect": "glass",
+      "glass_highlight": 68,
+      "glass_opacity": 68,
+      "glass_refraction": 8,
+      "glass_tint": "#8ddfff"
+    },
+    "Extrude": {
+      "effect": "extrude",
+      "extrude_angle": 45,
+      "extrude_colour": "#35485e",
+      "extrude_depth": 9,
+      "extrude_length": 18
+    },
+    "Shadow": {
+      "effect": "shadow",
+      "shadow_angle": 135,
+      "shadow_colour": "#111722",
+      "shadow_distance": 15,
+      "shadow_opacity": 58,
+      "shadow_softness": 5
+    },
+    "Motion Trail": {
+      "effect": "motion_trail",
+      "motion_trail_angle": 210,
+      "motion_trail_colour": "#39c8ff",
+      "motion_trail_length": 22,
+      "motion_trail_opacity": 55,
+      "motion_trail_steps": 9
+    },
+    "Water Drops": {
+      "effect": "water_drops",
+      "water_drops_amount": 62,
+      "water_drops_highlight": "#f5ffff",
+      "water_drops_scale": 32,
+      "water_drops_seed": 53
+    },
+    "Drip": {
+      "effect": "drip",
+      "drip_amount": 55,
+      "drip_colour": "#55ca7a",
+      "drip_length": 18,
+      "drip_seed": 59
+    },
+    "Snow": {
+      "effect": "snow",
+      "snow_amount": 72,
+      "snow_cool": "#d9f2ff",
+      "snow_depth": 8,
+      "snow_seed": 61
+    },
+    "Icicles": {
+      "effect": "icicles",
+      "icicles_density": 66,
+      "icicles_length": 22,
+      "icicles_seed": 67,
+      "icicles_tint": "#bceeff"
+    },
+    "Backlight": {
+      "effect": "backlight",
+      "backlight_colour": "#b9dfff",
+      "backlight_radius": 34,
+      "backlight_rays": 42,
+      "backlight_seed": 101,
+      "backlight_strength": 72
+    },
+    "Corona": {
+      "effect": "corona",
+      "corona_colour": "#ffbd53",
+      "corona_radius": 38,
+      "corona_rays": 72,
+      "corona_seed": 103,
+      "corona_strength": 70
+    },
+    "Electrify": {
+      "effect": "electrify",
+      "electrify_colour": "#b9eaff",
+      "electrify_density": 66,
+      "electrify_reach": 38,
+      "electrify_seed": 107,
+      "electrify_strength": 78
+    },
+    "Fire": {
+      "effect": "fire",
+      "fire_detail": 66,
+      "fire_height": 42,
+      "fire_intensity": 75,
+      "fire_seed": 109
+    },
+    "Glow": {
+      "effect": "glow",
+      "glow_colour": "#60aaff",
+      "glow_inner_colour": "#e8f6ff",
+      "glow_radius": 27,
+      "glow_strength": 68
+    },
+    "Smoke": {
+      "effect": "smoke",
+      "smoke_colour": "#aaaeb5",
+      "smoke_density": 62,
+      "smoke_detail": 64,
+      "smoke_height": 48,
+      "smoke_seed": 113
+    },
+    "Star": {
+      "effect": "star",
+      "star_angle": 0,
+      "star_center": [
+        50,
+        50
+      ],
+      "star_colour": "#fff3c2",
+      "star_depth": 42,
+      "star_radius": 38,
+      "star_seed": 127,
+      "star_spikes": 8,
+      "star_strength": 80,
+      "star_style": "polygon"
+    },
+    "Swirl": {
+      "effect": "swirl",
+      "swirl_amount": 58,
+      "swirl_center": [
+        50,
+        50
+      ],
+      "swirl_colour_a": "#63361f",
+      "swirl_colour_b": "#c07d3f",
+      "swirl_detail": 62,
+      "swirl_direction": "clockwise",
+      "swirl_radius": 40,
+      "swirl_scale": 26,
+      "swirl_seed": 131,
+      "swirl_style": "marble",
+      "swirl_vein_colour": "#ead0a0"
+    },
+    "Ripples": {
+      "effect": "ripples",
+      "ripples_amount": 56,
+      "ripples_center": [
+        50,
+        50
+      ],
+      "ripples_frequency": 4,
+      "ripples_radius": 42
+    }
+  }
+}

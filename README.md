@@ -62,7 +62,7 @@ Textures fill a surface by default. Enable **Preserve transparency** to keep the
 ## Install and use
 
 1. Install or build the **`codex/desktop-large-plugin-effects`** branch of the **[PhotoCraft fork](https://github.com/Josephur/photocraft/tree/codex/desktop-large-plugin-effects)**. This host requirement is temporary while the supporting PRs are resolved.
-2. Download the bundled **[freecandy7.wasm](plugins/lightning/dist/freecandy7.wasm)**, or build it using the instructions below.
+2. Download the bundled **[freecandy7.wasm](plugins/freecandy7/dist/freecandy7.wasm)**, or build it using the instructions below.
 3. Put the module in your PhotoCraft plug-in folder and configure that folder under **Edit → Preferences → Plug-ins**. Reopen PhotoCraft if it was already running when the module changed.
 4. Open **Filter → Plug-ins → FreeCandy7**, then choose an **Effect**.
 
@@ -70,19 +70,19 @@ For a shape effect on a photograph, make a selection on a pixel layer before ope
 
 ## Build
 
-The crate for the entire suite lives in `plugins/lightning/` for historical reasons. It produces one module, `plugins/lightning/dist/freecandy7.wasm`.
+The crate for the entire suite lives in `plugins/freecandy7/`. It produces one module, `plugins/freecandy7/dist/freecandy7.wasm`.
 
 ```sh
 rustup target add wasm32-unknown-unknown
-./plugins/lightning/build.sh
+./plugins/freecandy7/build.sh
 ```
 
 Run the plug-in checks:
 
 ```sh
-cargo test --manifest-path plugins/lightning/Cargo.toml
-cargo clippy --manifest-path plugins/lightning/Cargo.toml --all-targets -- -D warnings
-cargo clippy --manifest-path plugins/lightning/Cargo.toml --target wasm32-unknown-unknown -- -D warnings
+cargo test --manifest-path plugins/freecandy7/Cargo.toml
+cargo clippy --manifest-path plugins/freecandy7/Cargo.toml --all-targets -- -D warnings
+cargo clippy --manifest-path plugins/freecandy7/Cargo.toml --target wasm32-unknown-unknown -- -D warnings
 ```
 
 ## Implementation and current limits
@@ -101,4 +101,4 @@ The showcase uses actual effect output from PhotoCraft’s WASM runtime, placed 
 
 ## License
 
-FreeCandy7 uses the [Zero-Clause BSD license (0BSD)](LICENSE): use, copy, modify, and distribute it for any purpose, with or without a fee. No attribution or source-publication requirement is imposed by this license. The bundled `libm` dependency retains its [third-party notices](plugins/lightning/LICENSE-THIRD-PARTY).
+FreeCandy7 uses the [Zero-Clause BSD license (0BSD)](LICENSE): use, copy, modify, and distribute it for any purpose, with or without a fee. No attribution or source-publication requirement is imposed by this license. The bundled `libm` dependency retains its [third-party notices](plugins/freecandy7/LICENSE-THIRD-PARTY).

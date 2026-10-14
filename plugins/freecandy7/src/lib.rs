@@ -21,7 +21,7 @@ fn panic(_: &core::panic::PanicInfo) -> ! {
 const MANIFEST_HEAD: &str = r#"{
   "id": "com.stack-tech.freecandy7",
   "name": "FreeCandy7",
-  "version": "0.15.0",
+  "version": "0.15.2",
   "kind": "filter",
   "author": "FreeCandy7 contributors",
   "description": "Procedural texture, material, lighting and distortion effects. Select an effect to show its settings.",

@@ -146,3 +146,22 @@ fn manifest_exposes_effect_scoped_size_and_jitter_controls() {
         }
     }
 }
+
+// A rounded liquid tip retains a broad cross-section one pixel above its
+// bottom. The old second taper collapsed that cross-section into a point.
+#[test]
+fn drip_bulbs_have_rounded_bottoms_instead_of_double_tapered_points() {
+    let pixels = render("drip", 500.0, 0.0, 18.0);
+    let coverage = |y: usize| -> f32 {
+        (25..WIDTH - 25)
+            .map(|x| pixels[(y * WIDTH + x) * 4 + 3])
+            .sum()
+    };
+    let bulb_width = (EDGE + 70..EDGE + 89).map(coverage).fold(0.0_f32, f32::max);
+    let near_bottom = coverage(EDGE + 89);
+    assert!(bulb_width > 10.0, "fixture needs visible bulbs");
+    assert!(
+        near_bottom / bulb_width > 0.32,
+        "tip collapsed into a point: near-bottom coverage {near_bottom}, bulb coverage {bulb_width}"
+    );
+}

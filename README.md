@@ -2,7 +2,7 @@
 
 **36 effects. One sweet plug-in.**
 
-Current version: **0.15.0**.
+Current version: **0.15.2**.
 
 ![FreeCandy7 effects for PhotoCraft, featuring the Free Candy van hero image](docs/showcase/hero.png)
 

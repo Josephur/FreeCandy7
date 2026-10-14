@@ -4,7 +4,9 @@
 # `rustup target add wasm32-unknown-unknown`.
 set -eu
 cd "$(dirname "$0")"
-cargo build --release --target wasm32-unknown-unknown
+# Keep compiler diagnostic paths independent of the build machine.
+RUSTFLAGS="${RUSTFLAGS:-} --remap-path-prefix=$HOME=FreeCandy7" \
+    cargo build --release --target wasm32-unknown-unknown
 mkdir -p dist
 cp target/wasm32-unknown-unknown/release/freecandy7.wasm dist/freecandy7.wasm
 echo "built dist/freecandy7.wasm ($(wc -c < dist/freecandy7.wasm) bytes)"

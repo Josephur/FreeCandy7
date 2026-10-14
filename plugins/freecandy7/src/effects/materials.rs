@@ -875,6 +875,36 @@ fn lower_anchor(
     let sy = edges.at(x, y)?;
     (y - sy <= limit).then(|| (sy, src.sample(x as f32, sy as f32)))
 }
+// Join the shaft to the bulb at its equator, where the ellipse has a finite
+// tangent. A quintic matches width, slope and curvature at both ends; blending
+// into the top of a clipped ellipse introduces a normal jump and a visible ring.
+fn drip_width(below: f32, len: f32, radius: f32) -> f32 {
+    let bulb_height = (radius * 1.12).min(len * 0.32);
+    let center = len - bulb_height;
+    if below >= center {
+        let v = (below - center) / bulb_height;
+        return radius * sqrtf((1.0 - v * v).max(0.0));
+    }
+    let span = 2.0 * bulb_height;
+    let start = center - span;
+    if below <= start {
+        let t = (below / len).clamp(0.0, 1.0);
+        return radius * (0.32 + 0.70 * (1.0 - t) * (1.0 - t) * (1.0 - t));
+    }
+    let remaining = 1.0 - start / len;
+    let a0 = radius * (0.32 + 0.70 * remaining * remaining * remaining);
+    let a1 = -2.1 * radius * remaining * remaining * span / len;
+    let a2 = 2.1 * radius * remaining * span * span / (len * len);
+    let value = radius - a0 - a1 - a2;
+    let slope = -a1 - 2.0 * a2;
+    let curvature = -radius * span * span / (bulb_height * bulb_height) - 2.0 * a2;
+    let a3 = 10.0 * value - 4.0 * slope + 0.5 * curvature;
+    let a4 = -15.0 * value + 7.0 * slope - curvature;
+    let a5 = 6.0 * value - 3.0 * slope + 0.5 * curvature;
+    let u = (below - start) / span;
+    a0 + u * (a1 + u * (a2 + u * (a3 + u * (a4 + u * a5))))
+}
+
 fn drip(job: &mut Job) -> i32 {
     let Some((src, ox, _, _, _)) = setup(job) else {
         return 1;
@@ -928,24 +958,29 @@ fn drip(job: &mut Job) -> i32 {
                     continue;
                 }
                 let t = below / len;
-                let bulge = sqrtf(
-                    (1.0 - ((below - (len - radius)) / radius)
-                        * ((below - (len - radius)) / radius))
-                        .max(0.0),
-                );
-                let neck = radius * (0.42 + 0.6 * (1.0 - t) * (1.0 - t) * (1.0 - t));
-                let tip = (len - below).max(0.0).min(radius) / radius;
-                let width = (neck.max(radius * bulge)) * sqrtf(tip);
+                let width = drip_width(below, len, radius);
+                // Surface-of-revolution normal includes vertical curvature, so the
+                // highlight rounds over the bulb instead of continuing as a stripe.
+                let step = (radius * 0.025).max(0.05);
+                let slope = (drip_width((below + step).min(len), len, radius)
+                    - drip_width((below - step).max(0.0), len, radius))
+                    / ((below + step).min(len) - (below - step).max(0.0)).max(0.001);
+                let normal_scale = 1.0 / sqrtf(1.0 + slope * slope);
                 let bend = sinf(t * 2.8) * (hash(key ^ 0x58) - 0.5) * 1.8 * size;
                 let across = x as f32 - cx - bend;
-                let cover = smoothstep(-0.6, 0.6, width - across.abs());
-                let nx = (across / width.max(0.2)).clamp(-1.0, 1.0);
-                let nz = sqrtf((1.0 - nx * nx).max(0.0));
-                let spec = power8((-nx * 0.48 + nz * 0.85).max(0.0));
+                let cover = smoothstep(-0.6, 0.6, (width - across.abs()) * normal_scale);
+                let radial_x = (across / width.max(0.001)).clamp(-1.0, 1.0);
+                let nx = radial_x * normal_scale;
+                let ny = -slope * normal_scale;
+                let nz = sqrtf((1.0 - radial_x * radial_x).max(0.0)) * normal_scale;
+                let light = (-nx * 0.40 - ny * 0.38 + nz * 0.83).max(0.0);
+                let spec = power8(light) * power8(light);
+                let rim = power8((nx * 0.68 + nz * 0.73).max(0.0));
                 let mut paint = [0.0; 4];
                 for c in 0..3 {
-                    paint[c] = (mix(colour[c], source[c], 0.14) * (0.48 + nz * 0.48 - nx * 0.15)
-                        + spec * 0.28)
+                    paint[c] = (mix(colour[c], source[c], 0.14) * (0.48 + light * 0.52)
+                        + spec * 0.36
+                        + rim * 0.055)
                         .clamp(0.0, 1.0);
                 }
                 paint[3] = cover * source[3];
@@ -1107,6 +1142,34 @@ fn icicles(job: &mut Job) -> i32 {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn drip_neck_to_bulb_has_no_surface_normal_jump() {
+        // A discontinuous slope creates a ring in the specular lighting even
+        // when the silhouette's width itself is continuous. Check the upper
+        // surface; the rounded bottom legitimately has a vertical tangent.
+        for (len, radius) in [(300.0_f32, 21.0_f32), (40.0, 2.1), (2.0, 8.0)] {
+            let center = len - (radius * 1.12).min(len * 0.32);
+            let step = len.min(radius) * 0.001;
+            let mut previous: Option<f32> = None;
+            let mut max_jump = 0.0_f32;
+            let mut y = step;
+            while y < center - step {
+                let slope = (drip_width(y + step, len, radius) - drip_width(y - step, len, radius))
+                    / (2.0 * step);
+                let normal_angle = libm::atanf(slope);
+                if let Some(last) = previous {
+                    max_jump = max_jump.max((normal_angle - last).abs());
+                }
+                previous = Some(normal_angle);
+                y += step;
+            }
+            assert!(
+                max_jump < 0.04,
+                "visible normal discontinuity for length {len}, radius {radius}: {max_jump} radians"
+            );
+        }
+    }
 
     fn input_pixels() -> Vec<f32> {
         let mut pixels = vec![0.0_f32; 64 * 64 * 4];

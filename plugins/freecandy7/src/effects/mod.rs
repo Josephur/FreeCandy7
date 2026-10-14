@@ -8,10 +8,13 @@ use crate::Job;
 
 mod atmosphere;
 pub(crate) mod common;
+mod cracked_paint;
+mod foil;
 mod fur;
 mod lightning;
 mod materials;
 mod neon;
+mod paper_cut;
 mod texture_materials;
 mod textures;
 mod treadplate;
@@ -63,6 +66,9 @@ pub const EFFECTS: &[Effect] = &[
     atmosphere::EFFECTS[7],
     atmosphere::EFFECTS[8],
     neon::EFFECT,
+    foil::EFFECT,
+    cracked_paint::EFFECT,
+    paper_cut::EFFECT,
 ];
 
 /// The effect called `name`.

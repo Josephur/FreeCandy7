@@ -23,6 +23,9 @@ fn shape_effects_request_the_actual_selection_as_their_input_shape() {
         "glow",
         "smoke",
         "neon_tubes",
+        "holographic_foil",
+        "cracked_paint",
+        "paper_cut",
     ];
     assert_eq!(effects.len(), expected.len());
     for name in expected {

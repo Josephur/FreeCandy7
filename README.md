@@ -1,8 +1,8 @@
 # FreeCandy7 for PhotoCraft
 
-**33 effects. One sweet plug-in.**
+**36 effects. One sweet plug-in.**
 
-Current version: **0.14.0**.
+Current version: **0.15.0**.
 
 ![FreeCandy7 effects for PhotoCraft, featuring the Free Candy van campaign image](docs/showcase/hero.png)
 
@@ -37,7 +37,7 @@ These are actual FreeCandy7 renders. Click any image for the full-size result.
 
 
 <!-- BEGIN GENERATED EFFECT SHOWCASE -->
-## All 33 effects
+## All 36 effects
 
 [![Every current FreeCandy7 effect](docs/showcase/all-effects.jpg)](docs/showcase/all-effects.jpg)
 
@@ -76,6 +76,9 @@ These are actual FreeCandy7 renders. Click any image for the full-size result.
 | Swirl | [View full-size ad](docs/showcase/effects/swirl.png) |
 | Ripples | [View full-size ad](docs/showcase/effects/ripples.png) |
 | Neon Tubes | [View full-size ad](docs/showcase/effects/neon_tubes.png) |
+| Holographic Foil | [View full-size ad](docs/showcase/effects/holographic_foil.png) |
+| Cracked Paint | [View full-size ad](docs/showcase/effects/cracked_paint.png) |
+| Paper Cut | [View full-size ad](docs/showcase/effects/paper_cut.png) |
 <!-- END GENERATED EFFECT SHOWCASE -->
 
 ## Advertising artwork
@@ -86,7 +89,7 @@ Five finished 1920 × 1080 ads feature the campaign photograph and actual render
 2. [Fire and Smoke](docs/showcase/advert-02.png)
 3. [Icicles and Snow](docs/showcase/advert-03.png)
 4. [Chrome, Wood, and Animal Fur](docs/showcase/advert-04.png)
-5. [33 effects, one plug-in](docs/showcase/advert-05.png)
+5. [36 effects, one plug-in](docs/showcase/advert-05.png)
 
 ## Made for the artwork in front of you
 

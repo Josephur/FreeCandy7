@@ -103,5 +103,14 @@
   "Offset Wave": {"effect":"ripples","ripples_amount":50,"ripples_frequency":4,"ripples_radius":45,"ripples_center":[32,65]},
   "Pink Neon Sign": {"effect": "neon_tubes", "neon_tubes_width": 8, "neon_tubes_glow": 28, "neon_tubes_colour": "#ff428a"},
   "Electric Blue Tubes": {"effect": "neon_tubes", "neon_tubes_width": 14, "neon_tubes_glow": 45, "neon_tubes_colour": "#30c9ff", "neon_tubes_glass": 80},
-  "Weathered Neon": {"effect": "neon_tubes", "neon_tubes_width": 9, "neon_tubes_glow": 22, "neon_tubes_colour": "#ff7540", "neon_tubes_breaks": 35, "neon_tubes_variation": 70, "neon_tubes_seed": 151}
+  "Weathered Neon": {"effect": "neon_tubes", "neon_tubes_width": 9, "neon_tubes_glow": 22, "neon_tubes_colour": "#ff7540", "neon_tubes_breaks": 35, "neon_tubes_variation": 70, "neon_tubes_seed": 151},
+  "Rainbow Foil": {"effect": "holographic_foil"},
+  "Warm Metallic Foil": {"effect": "holographic_foil", "holographic_foil_colour": "#efad3d", "holographic_foil_strength": 40, "holographic_foil_angle": 55, "holographic_foil_scale": 200},
+  "Fine Enamel Cracks": {"effect": "cracked_paint"},
+  "Chipped Terracotta": {"effect": "cracked_paint", "cracked_paint_colour": "#cf4f24", "cracked_paint_width": 1.8, "cracked_paint_chipping": 55},
+  "Colored Paper Stack": {"effect": "paper_cut", "paper_cut_material": "paper", "paper_cut_colour": "#fa5c4f"},
+  "Layered Cardboard": {"effect": "paper_cut", "paper_cut_material": "cardboard", "paper_cut_colour": "#e3c48f", "paper_cut_depth": 42},
+  "Ocean Paper Layers": {"effect": "paper_cut", "paper_cut_material": "paper", "paper_cut_colour": "#36b6cd", "paper_cut_layers": 12, "paper_cut_depth": 55},
+  "Prismatic Silver": {"effect":"holographic_foil","holographic_foil_angle":-35,"holographic_foil_scale":130,"holographic_foil_strength":90,"holographic_foil_bevel":10},
+  "Weathered Blue Paint": {"effect":"cracked_paint","cracked_paint_colour":"#4980b4","cracked_paint_scale":110,"cracked_paint_width":2.3,"cracked_paint_chipping":35,"cracked_paint_seed":271}
 }

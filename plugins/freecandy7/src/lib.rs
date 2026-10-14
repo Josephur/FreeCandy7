@@ -21,7 +21,7 @@ fn panic(_: &core::panic::PanicInfo) -> ! {
 const MANIFEST_HEAD: &str = r#"{
   "id": "com.stack-tech.freecandy7",
   "name": "FreeCandy7",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "kind": "filter",
   "author": "FreeCandy7 contributors",
   "description": "Procedural texture, material, lighting and distortion effects. Select an effect to show its settings.",
@@ -31,11 +31,11 @@ const MANIFEST_TAIL: &str = r#"
   },
   "presetSelector": "effect",
   "presetPreserve": ["animal_fur_pattern", "animal_fur_scale", "animal_fur_scaling", "animal_fur_natural_colors", "animal_fur_light", "animal_fur_dark", "animal_fur_seed"],
-  "selectionShape": {"parameter":"effect","values":["bevel","chrome","glass","extrude","shadow","motion_trail","drip","snow","icicles","backlight","corona","electrify","fire","glow","smoke","neon_tubes"]},
+  "selectionShape": {"parameter":"effect","values":["bevel","chrome","glass","extrude","shadow","motion_trail","drip","snow","icicles","backlight","corona","electrify","fire","glow","smoke","neon_tubes","holographic_foil","cracked_paint","paper_cut"]},
   "guide": {"from": "start", "to": "end"},
   "overlap": 64,
   "clampContext": true,
-  "clampContextWhen": {"parameter":"effect","values":["drip","icicles","snow","shadow","extrude","backlight","corona","electrify","fire","glow","smoke"]},
+  "clampContextWhen": {"parameter":"effect","values":["drip","icicles","snow","shadow","extrude","backlight","corona","electrify","fire","glow","smoke","holographic_foil","paper_cut"]},
   "area": "canvas",
   "presets": "#;
 const BUILTIN_PRESETS: &str = include_str!("../presets/builtins.json");
@@ -223,6 +223,8 @@ pub fn required_overlap(json: &[u8]) -> u32 {
                 + num(json, "neon_tubes_glow", 28.0).clamp(0.0, 1250.0)
                 + 4.0
         }
+        b"holographic_foil" => num(json, "holographic_foil_bevel", 18.0).clamp(0.0, 500.0) + 4.0,
+        b"paper_cut" => num(json, "paper_cut_depth", 36.0).clamp(0.0, 500.0) + 8.0,
         b"fire" => num(json, "fire_height", 42.0).clamp(8.0, 1500.0) + 4.0,
         b"smoke" => num(json, "smoke_height", 48.0).clamp(8.0, 1500.0) + 4.0,
         b"backlight" => num(json, "backlight_radius", 34.0).clamp(4.0, 1500.0) + 4.0,

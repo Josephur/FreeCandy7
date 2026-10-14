@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>FreeCandy7 — leather effect preview (mock-ups)</title>
+<style>
+  body { background:#14161a; color:#e7e7ea; font:15px/1.5 system-ui, sans-serif; margin:0; padding:28px; }
+  h1 { font-size:22px; margin:0 0 4px; }
+  .note { color:#9aa0aa; max-width:70ch; margin:0 0 20px; }
+  .note strong { color:#ffb4a2; }
+  h2 { font-size:16px; margin:28px 0 10px; color:#cfd3da; border-bottom:1px solid #2a2e36; padding-bottom:6px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:14px; }
+  figure { margin:0; background:#1c1f25; border:1px solid #2a2e36; border-radius:8px; overflow:hidden; }
+  figure img { display:block; width:100%; height:auto; }
+  figcaption { padding:8px 10px; font-size:13px; }
+  figcaption b { display:block; }
+  figcaption span { color:#9aa0aa; }
+  .sheet img { width:100%; height:auto; border:1px solid #2a2e36; border-radius:8px; }
+</style>
+</head>
+<body>
+  <h1>Leather effect — visual preview</h1>
+  <p class="note"><strong>Illustrative mock-ups, not plug-in output.</strong>
+  FreeCandy7 has no <code>leather</code> effect yet. These images come from
+  <code>generate.py</code>, which ports the plug-in's deterministic primitives
+  (hash / noise / fbm / warped Voronoi) to Python. The real Rust output would
+  differ in detail.</p>
+
+  <h2>All swatches</h2>
+  <p class="sheet"><img src="contact-sheet.png" alt="All leather swatches"></p>
+
+  <h2>Natural hides</h2>
+  <div class="grid">
+    <figure><img src="hide_01_cowhide.png" alt="Cowhide"><figcaption><b>Cowhide</b><span>Classic medium pebble; baseline</span></figcaption></figure>
+    <figure><img src="hide_02_lamb_nappa.png" alt="Lamb nappa"><figcaption><b>Lamb / nappa</b><span>Fine soft grain, satin sheen</span></figcaption></figure>
+    <figure><img src="hide_03_goat_morocco.png" alt="Goat morocco"><figcaption><b>Goat / morocco</b><span>Fine, matte, bookbinding</span></figcaption></figure>
+    <figure><img src="hide_04_pigskin.png" alt="Pigskin"><figcaption><b>Pigskin</b><span>Pebble with pore dots</span></figcaption></figure>
+    <figure><img src="hide_05_ostrich.png" alt="Ostrich"><figcaption><b>Ostrich</b><span>Raised quill domes</span></figcaption></figure>
+    <figure><img src="hide_06_stingray_shagreen.png" alt="Stingray shagreen"><figcaption><b>Stingray / shagreen</b><span>Dense pebbles + ridge</span></figcaption></figure>
+    <figure><img src="hide_07_cordovan.png" alt="Cordovan"><figcaption><b>Horsehide / cordovan</b><span>Tight grain, deep gloss</span></figcaption></figure>
+    <figure><img src="hide_08_buffalo.png" alt="Buffalo"><figcaption><b>Buffalo / bison</b><span>Large rugged grain</span></figcaption></figure>
+    <figure><img src="hide_09_deerskin.png" alt="Deerskin"><figcaption><b>Deerskin</b><span>Very fine, soft</span></figcaption></figure>
+    <figure><img src="hide_10_kangaroo.png" alt="Kangaroo"><figcaption><b>Kangaroo</b><span>Fine, dense, directional</span></figcaption></figure>
+  </div>
+
+  <h2>Finishes (over one common substrate)</h2>
+  <div class="grid">
+    <figure><img src="finish_01_nappa.png" alt="Nappa"><figcaption><b>Nappa</b><span>Smooth, soft sheen</span></figcaption></figure>
+    <figure><img src="finish_02_pebbled.png" alt="Pebbled"><figcaption><b>Pebbled</b><span>Uniform pebble</span></figcaption></figure>
+    <figure><img src="finish_03_suede.png" alt="Suede"><figcaption><b>Suede</b><span>Napped, matte</span></figcaption></figure>
+    <figure><img src="finish_04_nubuck.png" alt="Nubuck"><figcaption><b>Nubuck</b><span>Finer velvety nap</span></figcaption></figure>
+    <figure><img src="finish_05_saffiano.png" alt="Saffiano"><figcaption><b>Saffiano</b><span>Embossed crosshatch</span></figcaption></figure>
+    <figure><img src="finish_06_patent.png" alt="Patent"><figcaption><b>Patent</b><span>Mirror gloss</span></figcaption></figure>
+    <figure><img src="finish_07_pullup_oiled.png" alt="Pull-up oiled"><figcaption><b>Pull-up / oiled</b><span>Creased, waxy</span></figcaption></figure>
+    <figure><img src="finish_08_distressed.png" alt="Worn"><figcaption><b>Worn</b><span>Scuffed, aged</span></figcaption></figure>
+  </div>
+</body>
+</html>

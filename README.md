@@ -4,13 +4,21 @@
 
 Current version: **0.15.0**.
 
-![FreeCandy7 effects for PhotoCraft, featuring the Free Candy van campaign image](docs/showcase/hero.png)
+![FreeCandy7 effects for PhotoCraft, featuring the Free Candy van hero image](docs/showcase/hero.png)
 
 FreeCandy7 gives your artwork reflective metal, fur, fire, ice, liquid drips, lightning, and a full collection of procedural textures. It installs as one WebAssembly plug-in, with one **Effect** dropdown and controls that follow the effect you choose.
 
 > **Requires our PhotoCraft fork for now.** Use the **`codex/desktop-large-plugin-effects`** branch of **[Josephur/photocraft](https://github.com/Josephur/photocraft/tree/codex/desktop-large-plugin-effects)**. The host changes that support this suite are still moving through the PR process. The standard upstream release does not yet include all required support. This requirement stays in place until those changes are settled and available upstream.
 
-## New: Neon Tubes
+## New materials: foil, paint, and paper
+
+| Holographic Foil | Cracked Paint | Paper Cut |
+|---|---|---|
+| [![Rainbow foil with a reflective bevel](docs/showcase/effects/holographic_foil.png)](docs/showcase/effects/holographic_foil.png) | [![Teal paint with fine procedural cracks](docs/showcase/effects/cracked_paint.png)](docs/showcase/effects/cracked_paint.png) | [![Colored paper sheets with stacked edges and contact shadows](docs/showcase/effects/paper_cut.png)](docs/showcase/effects/paper_cut.png) |
+
+**Holographic Foil** combines rainbow color, metallic reflections, microgrooves, and adjustable bevels. **Cracked Paint** adds adjustable cracks and chipping over a colored undercoat. **Paper Cut** stacks up to 24 sheets with adjustable depth and direction; choose **Layered Cardboard** in its Presets dropdown for corrugated kraft edges. Each effect includes three built-in presets. These examples are rendered by the actual plug-in.
+
+## Neon Tubes
 
 [![Neon Tubes outlining NEON lettering with pink glass and a soft glow](docs/showcase/neon-tubes.png)](docs/showcase/neon-tubes.png)
 
@@ -41,51 +49,51 @@ These are actual FreeCandy7 renders. Click any image for the full-size result.
 
 [![Every current FreeCandy7 effect](docs/showcase/all-effects.jpg)](docs/showcase/all-effects.jpg)
 
-| Effect | Actual rendered ad |
+| Effect | Rendered example |
 |---|---|
-| Lightning | [View full-size ad](docs/showcase/effects/lightning.png) |
-| Animal Fur | [View full-size ad](docs/showcase/effects/animal_fur.png) |
-| Brick Wall | [View full-size ad](docs/showcase/effects/brick_wall.png) |
-| Brushed Metal | [View full-size ad](docs/showcase/effects/brushed_metal.png) |
-| Clouds | [View full-size ad](docs/showcase/effects/clouds.png) |
-| Diamond Plate | [View full-size ad](docs/showcase/effects/diamond_plate.png) |
-| Marble | [View full-size ad](docs/showcase/effects/marble.png) |
-| Reptile Skin | [View full-size ad](docs/showcase/effects/reptile_skin.png) |
-| Rust | [View full-size ad](docs/showcase/effects/rust.png) |
-| Stone Wall | [View full-size ad](docs/showcase/effects/stone_wall.png) |
-| Texture Noise | [View full-size ad](docs/showcase/effects/texture_noise.png) |
-| Weave | [View full-size ad](docs/showcase/effects/weave.png) |
-| Wood | [View full-size ad](docs/showcase/effects/wood.png) |
-| Bevel | [View full-size ad](docs/showcase/effects/bevel.png) |
-| Chrome | [View full-size ad](docs/showcase/effects/chrome.png) |
-| Glass | [View full-size ad](docs/showcase/effects/glass.png) |
-| Extrude | [View full-size ad](docs/showcase/effects/extrude.png) |
-| Shadow | [View full-size ad](docs/showcase/effects/shadow.png) |
-| Motion Trail | [View full-size ad](docs/showcase/effects/motion_trail.png) |
-| Water Drops | [View full-size ad](docs/showcase/effects/water_drops.png) |
-| Drip | [View full-size ad](docs/showcase/effects/drip.png) |
-| Snow | [View full-size ad](docs/showcase/effects/snow.png) |
-| Icicles | [View full-size ad](docs/showcase/effects/icicles.png) |
-| Backlight | [View full-size ad](docs/showcase/effects/backlight.png) |
-| Corona | [View full-size ad](docs/showcase/effects/corona.png) |
-| Electrify | [View full-size ad](docs/showcase/effects/electrify.png) |
-| Fire | [View full-size ad](docs/showcase/effects/fire.png) |
-| Glow | [View full-size ad](docs/showcase/effects/glow.png) |
-| Smoke | [View full-size ad](docs/showcase/effects/smoke.png) |
-| Star | [View full-size ad](docs/showcase/effects/star.png) |
-| Swirl | [View full-size ad](docs/showcase/effects/swirl.png) |
-| Ripples | [View full-size ad](docs/showcase/effects/ripples.png) |
-| Neon Tubes | [View full-size ad](docs/showcase/effects/neon_tubes.png) |
-| Holographic Foil | [View full-size ad](docs/showcase/effects/holographic_foil.png) |
-| Cracked Paint | [View full-size ad](docs/showcase/effects/cracked_paint.png) |
-| Paper Cut | [View full-size ad](docs/showcase/effects/paper_cut.png) |
+| Lightning | [View full-size example](docs/showcase/effects/lightning.png) |
+| Animal Fur | [View full-size example](docs/showcase/effects/animal_fur.png) |
+| Brick Wall | [View full-size example](docs/showcase/effects/brick_wall.png) |
+| Brushed Metal | [View full-size example](docs/showcase/effects/brushed_metal.png) |
+| Clouds | [View full-size example](docs/showcase/effects/clouds.png) |
+| Diamond Plate | [View full-size example](docs/showcase/effects/diamond_plate.png) |
+| Marble | [View full-size example](docs/showcase/effects/marble.png) |
+| Reptile Skin | [View full-size example](docs/showcase/effects/reptile_skin.png) |
+| Rust | [View full-size example](docs/showcase/effects/rust.png) |
+| Stone Wall | [View full-size example](docs/showcase/effects/stone_wall.png) |
+| Texture Noise | [View full-size example](docs/showcase/effects/texture_noise.png) |
+| Weave | [View full-size example](docs/showcase/effects/weave.png) |
+| Wood | [View full-size example](docs/showcase/effects/wood.png) |
+| Bevel | [View full-size example](docs/showcase/effects/bevel.png) |
+| Chrome | [View full-size example](docs/showcase/effects/chrome.png) |
+| Glass | [View full-size example](docs/showcase/effects/glass.png) |
+| Extrude | [View full-size example](docs/showcase/effects/extrude.png) |
+| Shadow | [View full-size example](docs/showcase/effects/shadow.png) |
+| Motion Trail | [View full-size example](docs/showcase/effects/motion_trail.png) |
+| Water Drops | [View full-size example](docs/showcase/effects/water_drops.png) |
+| Drip | [View full-size example](docs/showcase/effects/drip.png) |
+| Snow | [View full-size example](docs/showcase/effects/snow.png) |
+| Icicles | [View full-size example](docs/showcase/effects/icicles.png) |
+| Backlight | [View full-size example](docs/showcase/effects/backlight.png) |
+| Corona | [View full-size example](docs/showcase/effects/corona.png) |
+| Electrify | [View full-size example](docs/showcase/effects/electrify.png) |
+| Fire | [View full-size example](docs/showcase/effects/fire.png) |
+| Glow | [View full-size example](docs/showcase/effects/glow.png) |
+| Smoke | [View full-size example](docs/showcase/effects/smoke.png) |
+| Star | [View full-size example](docs/showcase/effects/star.png) |
+| Swirl | [View full-size example](docs/showcase/effects/swirl.png) |
+| Ripples | [View full-size example](docs/showcase/effects/ripples.png) |
+| Neon Tubes | [View full-size example](docs/showcase/effects/neon_tubes.png) |
+| Holographic Foil | [View full-size example](docs/showcase/effects/holographic_foil.png) |
+| Cracked Paint | [View full-size example](docs/showcase/effects/cracked_paint.png) |
+| Paper Cut | [View full-size example](docs/showcase/effects/paper_cut.png) |
 <!-- END GENERATED EFFECT SHOWCASE -->
 
-## Advertising artwork
+## Showcase images
 
-Five finished 1920 × 1080 ads feature the campaign photograph and actual rendered effects:
+Five 1920 × 1080 showcase images feature the hero photograph and actual rendered effects:
 
-1. [FreeCandy7 campaign hero](docs/showcase/advert-01.png)
+1. [FreeCandy7 hero](docs/showcase/advert-01.png)
 2. [Fire and Smoke](docs/showcase/advert-02.png)
 3. [Icicles and Snow](docs/showcase/advert-03.png)
 4. [Chrome, Wood, and Animal Fur](docs/showcase/advert-04.png)
